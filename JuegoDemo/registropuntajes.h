@@ -33,9 +33,14 @@ public:
         Fecha
     };
 
-    int rowCount(const QModelIndex &padre = QModelIndex()) const override;
+    int rowCount(
+        const QModelIndex &padre = QModelIndex()
+        ) const override;
 
-    QVariant data(const QModelIndex &indice, int campo) const override;
+    QVariant data(
+        const QModelIndex &indice,
+        int campo
+        ) const override;
 
     QHash<int, QByteArray> roleNames() const override;
 
