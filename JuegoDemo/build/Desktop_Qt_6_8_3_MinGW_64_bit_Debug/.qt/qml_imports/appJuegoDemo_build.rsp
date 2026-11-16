@@ -1,0 +1,14 @@
+-rootPath
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo
+-cmake-output
+-output-file
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug/.qt/qml_imports/appJuegoDemo_build.cmake
+-importPath
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug/JuegoDemo
+-importPath
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug
+-importPath
+C:/Qt/6.8.3/mingw_64/qml
+-qrcFiles
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug/.qt/rcc/qmake_JuegoDemo.qrc
+C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug/.qt/rcc/appJuegoDemo_raw_qml_0.qrc

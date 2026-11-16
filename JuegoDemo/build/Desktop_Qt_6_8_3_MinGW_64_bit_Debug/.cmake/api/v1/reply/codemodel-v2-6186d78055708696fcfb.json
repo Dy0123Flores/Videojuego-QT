@@ -1,0 +1,196 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"hasInstallRule" : true,
+					"jsonFile" : "directory-.-Debug-8df55f546ec64d900a10.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "JuegoDemo",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "all_aotstats::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_aotstats-Debug-f5b9b8f67dd6f5a2bbd2.json",
+					"name" : "all_aotstats",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint-Debug-143144eeaa00b94f4d1a.json",
+					"name" : "all_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_json-Debug-3646dde093ffc3996e9c.json",
+					"name" : "all_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmllint_module-Debug-94f6ce815267e4f4dab8.json",
+					"name" : "all_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "all_qmltyperegistrations::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-all_qmltyperegistrations-Debug-c49e5b1638303a749ed4.json",
+					"name" : "all_qmltyperegistrations",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo-Debug-810af6e57917fe654058.json",
+					"name" : "appJuegoDemo",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_autogen-Debug-cff6bdd94199eae6a8d3.json",
+					"name" : "appJuegoDemo_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_autogen_timestamp_deps-Debug-6368540b9f4c0d9059bc.json",
+					"name" : "appJuegoDemo_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_copy_qml::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_copy_qml-Debug-46a2be94c546a110149b.json",
+					"name" : "appJuegoDemo_copy_qml",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_copy_res::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_copy_res-Debug-b9107a4d35c3ce3150b2.json",
+					"name" : "appJuegoDemo_copy_res",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_qmlimportscan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_qmlimportscan-Debug-4eb5d5960ecf023b6b8e.json",
+					"name" : "appJuegoDemo_qmlimportscan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_qmllint::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_qmllint-Debug-2c2786ef551df2382939.json",
+					"name" : "appJuegoDemo_qmllint",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_qmllint_json::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_qmllint_json-Debug-fd188a38e3c06feaf696.json",
+					"name" : "appJuegoDemo_qmllint_json",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_qmllint_module::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_qmllint_module-Debug-eb28d451ec073560cfcc.json",
+					"name" : "appJuegoDemo_qmllint_module",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "appJuegoDemo_qmltyperegistration::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-appJuegoDemo_qmltyperegistration-Debug-5623d4d18fe0565006a4.json",
+					"name" : "appJuegoDemo_qmltyperegistration",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "module_appJuegoDemo_aotstats_target::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-module_appJuegoDemo_aotstats_target-Debug-53734d579b979a2614ce.json",
+					"name" : "module_appJuegoDemo_aotstats_target",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/flore/Music/Videojuego-QT/JuegoDemo/build/Desktop_Qt_6_8_3_MinGW_64_bit_Debug",
+		"source" : "C:/Users/flore/Music/Videojuego-QT/JuegoDemo"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 7
+	}
+}
