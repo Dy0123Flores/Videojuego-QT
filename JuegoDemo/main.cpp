@@ -1,18 +1,25 @@
+
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
+#include <QQmlContext>
+#include "registropuntajes.h"
 
 int main(int argc, char *argv[])
 {
-    QGuiApplication app(argc, argv);
+    QGuiApplication aplicacion(argc, argv);
 
-    QQmlApplicationEngine engine;
-    QObject::connect(
-        &engine,
-        &QQmlApplicationEngine::objectCreationFailed,
-        &app,
-        []() { QCoreApplication::exit(-1); },
-        Qt::QueuedConnection);
-    engine.loadFromModule("JuegoDemo", "Main");
+    RegistroPuntajes registro;
 
-    return QGuiApplication::exec();
+    QQmlApplicationEngine motor;
+
+    motor.rootContext()->setContextProperty(
+        "registroPuntajes", &registro
+        );
+
+    motor.loadFromModule("JuegoDemo", "Main");
+
+    if (motor.rootObjects().isEmpty())
+        return -1;
+
+    return aplicacion.exec();
 }
