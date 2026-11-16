@@ -120,3 +120,119 @@ void RegistroPuntajes::eliminarHistorial()
 
     guardarPartidas();
 }
+
+QString RegistroPuntajes::obtenerRuta() const
+{
+    return QStandardPaths::writableLocation(
+               QStandardPaths::AppDataLocation
+               ) + "/partidas.json";
+}
+
+void RegistroPuntajes::cargarPartidas()
+{
+    QFile archivo(obtenerRuta());
+
+    if (!archivo.open(QIODevice::ReadOnly))
+        return;
+
+    QJsonParseError error;
+
+    QJsonDocument documento = QJsonDocument::fromJson(
+        archivo.readAll(), &error
+        );
+
+    if (error.error != QJsonParseError::NoError ||
+        !documento.isArray())
+        return;
+
+    for (const QJsonValue &valor : documento.array()) {
+        if (!valor.isObject())
+            continue;
+
+        QJsonObject objeto = valor.toObject();
+
+        Partida partida;
+
+        partida.nombre = objeto.value("nombre").toString();
+        partida.alias = objeto.value("alias").toString();
+        partida.edad = objeto.value("edad").toInt();
+        partida.dificultad = objeto.value("dificultad").toString();
+        partida.puntos = objeto.value("puntos").toInt();
+        partida.fecha = objeto.value("fecha").toString();
+
+        partidas.append(partida);
+    }
+}
+
+QString RegistroPuntajes::obtenerRuta() const
+{
+    return QStandardPaths::writableLocation(
+               QStandardPaths::AppDataLocation
+               ) + "/partidas.json";
+}
+
+void RegistroPuntajes::cargarPartidas()
+{
+    QFile archivo(obtenerRuta());
+
+    if (!archivo.open(QIODevice::ReadOnly))
+        return;
+
+    QJsonParseError error;
+
+    QJsonDocument documento = QJsonDocument::fromJson(
+        archivo.readAll(), &error
+        );
+
+    if (error.error != QJsonParseError::NoError ||
+        !documento.isArray())
+        return;
+
+    for (const QJsonValue &valor : documento.array()) {
+        if (!valor.isObject())
+            continue;
+
+        QJsonObject objeto = valor.toObject();
+
+        Partida partida;
+
+        partida.nombre = objeto.value("nombre").toString();
+        partida.alias = objeto.value("alias").toString();
+        partida.edad = objeto.value("edad").toInt();
+        partida.dificultad = objeto.value("dificultad").toString();
+        partida.puntos = objeto.value("puntos").toInt();
+        partida.fecha = objeto.value("fecha").toString();
+
+        partidas.append(partida);
+    }
+}
+
+void RegistroPuntajes::guardarPartidas() const
+{
+    QFileInfo informacion(obtenerRuta());
+
+    QDir().mkpath(informacion.absolutePath());
+
+    QJsonArray lista;
+
+    for (const Partida &partida : partidas) {
+        QJsonObject objeto;
+
+        objeto["nombre"] = partida.nombre;
+        objeto["alias"] = partida.alias;
+        objeto["edad"] = partida.edad;
+        objeto["dificultad"] = partida.dificultad;
+        objeto["puntos"] = partida.puntos;
+        objeto["fecha"] = partida.fecha;
+
+        lista.append(objeto);
+    }
+
+    QSaveFile archivo(obtenerRuta());
+
+    if (!archivo.open(QIODevice::WriteOnly))
+        return;
+
+    archivo.write(QJsonDocument(lista).toJson());
+    archivo.commit();
+}
