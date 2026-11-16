@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/qt/qml/JuegoDemo/">
-    <file alias="Main.qml">C:/Users/flore/Music/Videojuego-QT/JuegoDemo/Main.qml</file>
-  </qresource>
-</RCC>
-
