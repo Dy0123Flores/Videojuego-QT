@@ -1,3 +1,4 @@
+
 #include "registropuntajes.h"
 #include <QDateTime>
 #include <QDir>
@@ -55,7 +56,7 @@ QVariant RegistroPuntajes::data(
     }
 }
 
-QHash<int, QByteArray> RegistroPuntajes::roleNames()const
+QHash<int, QByteArray> RegistroPuntajes::roleNames() const
 {
     return {
         {Nombre, "nombre"},
@@ -119,49 +120,6 @@ void RegistroPuntajes::eliminarHistorial()
     emit cantidadChanged();
 
     guardarPartidas();
-}
-
-QString RegistroPuntajes::obtenerRuta() const
-{
-    return QStandardPaths::writableLocation(
-               QStandardPaths::AppDataLocation
-               ) + "/partidas.json";
-}
-
-void RegistroPuntajes::cargarPartidas()
-{
-    QFile archivo(obtenerRuta());
-
-    if (!archivo.open(QIODevice::ReadOnly))
-        return;
-
-    QJsonParseError error;
-
-    QJsonDocument documento = QJsonDocument::fromJson(
-        archivo.readAll(), &error
-        );
-
-    if (error.error != QJsonParseError::NoError ||
-        !documento.isArray())
-        return;
-
-    for (const QJsonValue &valor : documento.array()) {
-        if (!valor.isObject())
-            continue;
-
-        QJsonObject objeto = valor.toObject();
-
-        Partida partida;
-
-        partida.nombre = objeto.value("nombre").toString();
-        partida.alias = objeto.value("alias").toString();
-        partida.edad = objeto.value("edad").toInt();
-        partida.dificultad = objeto.value("dificultad").toString();
-        partida.puntos = objeto.value("puntos").toInt();
-        partida.fecha = objeto.value("fecha").toString();
-
-        partidas.append(partida);
-    }
 }
 
 QString RegistroPuntajes::obtenerRuta() const
