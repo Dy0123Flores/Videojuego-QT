@@ -66,3 +66,57 @@ QHash<int, QByteArray> RegistroPuntajes::roleNames()const
         {Fecha, "fecha"}
     };
 }
+
+int RegistroPuntajes::cantidad() const
+{
+    return partidas.size();
+}
+
+void RegistroPuntajes::agregarPartida(
+    const QString &nombre,
+    const QString &alias,
+    int edad,
+    const QString &dificultad,
+    int puntos
+    )
+{
+    if (nombre.trimmed().size() < 2 ||
+        alias.trimmed().size() < 2 ||
+        edad < 5 ||
+        edad > 100 ||
+        puntos < 0)
+        return;
+
+    Partida partida;
+
+    partida.nombre = nombre.trimmed();
+    partida.alias = alias.trimmed();
+    partida.edad = edad;
+    partida.dificultad = dificultad;
+    partida.puntos = puntos;
+    partida.fecha = QDateTime::currentDateTime().toString(
+        "dd/MM/yyyy hh:mm"
+        );
+
+    beginInsertRows(QModelIndex(), 0, 0);
+    partidas.prepend(partida);
+    endInsertRows();
+
+    emit cantidadChanged();
+
+    guardarPartidas();
+}
+
+void RegistroPuntajes::eliminarHistorial()
+{
+    if (partidas.isEmpty())
+        return;
+
+    beginResetModel();
+    partidas.clear();
+    endResetModel();
+
+    emit cantidadChanged();
+
+    guardarPartidas();
+}
