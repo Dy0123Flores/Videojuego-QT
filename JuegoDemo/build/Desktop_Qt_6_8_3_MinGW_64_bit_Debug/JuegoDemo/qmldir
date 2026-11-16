@@ -1,0 +1,5 @@
+module JuegoDemo
+typeinfo appJuegoDemo.qmltypes
+prefer :/qt/qml/JuegoDemo/
+Main 1.0 Main.qml
+
